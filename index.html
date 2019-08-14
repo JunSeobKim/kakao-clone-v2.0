@@ -10,6 +10,7 @@
       integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="css/style.css" />
     <title>채팅 | Kakao Clone</title>
   </head>
   <body>
@@ -21,7 +22,7 @@
         <i class="fas fa-clock"></i>
         <i class="fas fa-volume-mute"></i>
         <i class="fas fa-wifi"></i>
-        <span class="status-bar_battery-level">75%</span>
+        <span class="status-bar__battery-level">75%</span>
         <i class="fas fa-battery-three-quarters"></i>
       </div>
     </div>
@@ -63,28 +64,29 @@
     </main>
 
     <nav class="nav">
-      <ul class="nav__list">
-        <li class="nav__list-item">
-          <a href="friends.html" class="nav__list-link">
+      <div class="nav__list">
+        <a href="friends.html" class="nav__list-link">
+          <div class="nav__list-item">
             <i class="far fa-user"></i>
-          </a>
-        </li>
-        <li class="nav__list-item">
-          <a href="index.html" class="nav__list-link">
+          </div>
+        </a>
+        <a href="index.html" class="nav__list-link">
+          <div class="nav__list-item">
             <i class="fas fa-comment"></i>
-          </a>
-        </li>
-        <li class="nav__list-item">
-          <a href="find.html" class="nav__list-link">
+            <div class="nav__badge">8</div>
+          </div>
+        </a>
+        <a href="find.html" class="nav__list-link">
+          <div class="nav__list-item">
             <i class="fas fa-search"></i>
-          </a>
-        </li>
-        <li class="nav__list-item">
-          <a href="more.html" class="nav__list-link">
+          </div>
+        </a>
+        <a href="more.html" class="nav__list-link">
+          <div class="nav__list-item">
             <i class="fas fa-ellipsis-h"></i>
-          </a>
-        </li>
-      </ul>
+          </div>
+        </a>
+      </div>
     </nav>
   </body>
 </html>
