@@ -6,7 +6,7 @@
 
 .friend .friend__avatar {
   width: 50px;
-  border-radius: 40%;
+  border-radius: 43%;
   margin-right: 15px;
 }
 
@@ -47,4 +47,21 @@
 .friend .chat__timestamp {
   font-size: 12px;
   opacity: 0.6;
+}
+
+.friend .friend__now-listening {
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1.5px solid #5add77;
+  font-size: 12px;
+}
+
+.friend__now-listening span {
+  opacity: 0.5;
+}
+
+.friend__now-listening i {
+  color: #5add77;
+  margin-left: 10px;
+  font-size: 10px;
 }

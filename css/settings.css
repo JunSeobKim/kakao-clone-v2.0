@@ -1,0 +1,43 @@
+.header .header__icon i {
+  opacity: 0.7;
+}
+
+.settings .settings__setting {
+  padding: 10px;
+}
+
+.settings .settings__icon {
+  margin-right: 25px;
+  font-size: 25px;
+  opacity: 0.7;
+}
+
+.settings .settings__title {
+  font-size: 18px;
+}
+
+.settings .settings__column {
+  display: flex;
+  align-items: center;
+}
+
+.settings .settings__column.version {
+  opacity: 0.5;
+}
+
+.settings .settings__setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.settings .settings__list.main-settings {
+  border-bottom: 1px solid #f7f7f7;
+  border-top: 1px solid #f7f7f7;
+  padding: 20px 0px;
+}
+
+.settings .settings__list {
+  padding: 20px 0px;
+}
