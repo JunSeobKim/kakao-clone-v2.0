@@ -1,5 +1,6 @@
 .header-wrapper {
   position: fixed;
+  z-index: 2;
   top: 0px;
   width: 100%;
   background-color: white;
@@ -19,7 +20,7 @@
   padding: 10px 20px 0px 20px;
 }
 
-.chats-body {
+.chat-screen {
   background-image: url("../images/chatBg.png");
   min-height: 100vh;
   padding-top: 100px;
@@ -53,6 +54,21 @@
   right: 20px;
 }
 
+@keyframes float {
+  0% {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px 0px,
+      rgba(0, 0, 0, 0.024) 0px -6px 16px -6px;
+  }
+  50% {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px -15px,
+      rgba(0, 0, 0, 0.024) 0px -6px 16px -6px;
+  }
+  100% {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px 0px,
+      rgba(0, 0, 0, 0.024) 0px -6px 16px -6px;
+  }
+}
+
 .chat__write {
   bottom: 0px;
   border-radius: 0;
@@ -61,8 +77,8 @@
   width: 100%;
   border: none;
   font-size: 14px;
-  transition: width 0.3s ease-in-out, border-radius 0.3s ease-in-out,
-    transform 0.3s ease-in-out;
+  transition: width 0.5s ease-in-out, border-radius 0.5s ease-in-out,
+    box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .chat__write:focus {
@@ -72,6 +88,7 @@
   border-radius: 40px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px -8px,
     rgba(0, 0, 0, 0.024) 0px -6px 16px -6px;
+  animation: float 3s ease-in-out infinite forwards;
 }
 
 .chat__write:focus ~ .chat__icon {
@@ -129,10 +146,23 @@
   justify-content: flex-end;
 }
 
+@keyframes spin {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateY(1turn);
+  }
+}
+
 .incoming-message img {
   width: 40px;
   border-radius: 18px;
   margin-right: 20px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px -8px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px,
+    rgba(0, 0, 0, 0.024) 0px -6px 16px -6px;
+  animation: spin 1s linear infinite;
 }
 
 .message .message__bubble {
@@ -158,4 +188,34 @@
 .sent-message .message__bubble {
   border-top-right-radius: 0px;
   background-image: linear-gradient(to left, #ece9e6, #ffffff);
+}
+
+@keyframes incomingAnim {
+  from {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.incoming-message {
+  animation: incomingAnim 0.4s ease-out forwards;
+}
+
+@keyframes sentAnimation {
+  from {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.sent-message {
+  animation: sentAnimation 0.4s ease-out forwards;
 }

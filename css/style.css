@@ -26,3 +26,31 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+main {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* @keyframes fadeInChat {
+  from {
+    transform: translateX(500px);
+  }
+  to {
+    transform: none;
+  }
+}
+
+.chat-screen {
+  animation: fadeInChat 0.5s ease-in-out;
+} */
